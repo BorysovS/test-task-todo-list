@@ -1,0 +1,7 @@
+.container {
+    /* display: flex; */
+    /* gap: 16px; */
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 16px;
+}
