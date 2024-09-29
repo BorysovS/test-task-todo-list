@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import { toast } from 'react-toastify';
+
 import styles from './TaskForm.module.css';
 
 export const TaskForm = ({ addTask }) => {
@@ -8,7 +10,7 @@ export const TaskForm = ({ addTask }) => {
   const handleSubmit = evt => {
     evt.preventDefault();
     if (!taskName) {
-      alert('The task cannot be empty.');
+      toast.error('The task cannot be empty.');
       return;
     }
     const newTask = {

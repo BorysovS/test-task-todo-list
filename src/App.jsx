@@ -4,6 +4,10 @@ import { AppBar } from './components/AppBar/AppBar';
 import { TaskForm } from './components/TaskForm/TaskForm';
 import { TaskList } from './components/TaskList/TaskList';
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
+
 import './App.css';
 
 const getInitialTasks = () => {
@@ -22,6 +26,7 @@ function App() {
 
   const addTask = newTask => {
     setTasks(prevTasks => {
+      toast.info('The task has been added');
       return [...prevTasks, newTask];
     });
   };
@@ -36,6 +41,7 @@ function App() {
 
   const removeTask = id => {
     setTasks(prevTasks => {
+      toast.success('task is delete');
       return prevTasks.filter(task => task.id !== id);
     });
   };
@@ -62,6 +68,18 @@ function App() {
 
   return (
     <Layout>
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
       <AppBar
         total={totalTasks}
         setFilterStatus={setFilterStatus}
