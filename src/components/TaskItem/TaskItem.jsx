@@ -37,14 +37,14 @@ export const TaskItem = ({ task, toggleCompleted, deleteTask }) => {
         type="button"
         onClick={() => deleteTask(task.id)}
       >
-        {/* <svg
+        <svg
           width={16}
           height={16}
           aria-label="icon-bin"
           className={styles.del_icon}
         >
-          <use href={sprite + '#icon-bin'}></use>
-        </svg> */}
+          <use href={`/sprite.svg#icon-bin`}></use>
+        </svg>
       </button>
     </div>
   );
