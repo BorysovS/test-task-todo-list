@@ -1,0 +1,13 @@
+.header_container {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.title {
+    margin-bottom: 20px;
+}

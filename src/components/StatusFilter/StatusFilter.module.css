@@ -1,0 +1,11 @@
+.btn_wrapper {
+  display: flex;
+  gap: 20px;
+  padding: 10px 24px;
+  border: 1px solid #fff;
+}
+
+.filter_wrapper {
+  display: flex;
+  gap: 20px;
+}

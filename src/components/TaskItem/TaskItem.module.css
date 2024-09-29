@@ -1,0 +1,96 @@
+.task_item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 26px;
+  margin-right: 36px;
+}
+
+.switch .checkbox_input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.checkbox_input:checked + .slider {
+  background-color: #2196f3;
+}
+
+.checkbox_input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.task_text {
+  display: block;
+  color: #fff;
+  font-size: 18px;
+  margin-right: auto;
+  white-space: normal;
+  word-wrap: break-word;
+  max-width: 800px;
+}
+
+.del_btn {
+  background-color: transparent;
+  border: none;
+}
+
+.del_icon {
+  fill: #fff;
+  transition: fill 250ms cubic-bezier(0.6, 0.18, 0.32, 0.7);
+}
+
+.del_btn:hover .del_icon {
+  fill: red;
+}
+
+.task_item_date {
+  font-size: 14px;
+  color: rgb(255 255 255 / 40%);
+}
+
+.date_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 24px;
+}
+
+.date_icon {
+  fill: #fff;
+  margin-right: 8px;
+}
+
+.checkbox_input:checked + .task_item {
+    opacity: 0.5;
+}

@@ -1,0 +1,15 @@
+.filter_btn {
+  padding: 2px 16px;
+  font-size: 18px;
+  background-color: #f0f0f0;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  transition: background-color 250ms cubic-bezier(0.6, 0.18, 0.32, 0.7),
+    color 250ms cubic-bezier(0.6, 0.18, 0.32, 0.7);
+}
+
+.filter_btn:hover,
+.filter_btn:focus {
+  background-color: #3704c4;
+  color: #fff;
+}

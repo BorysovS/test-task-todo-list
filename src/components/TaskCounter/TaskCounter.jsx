@@ -1,12 +1,13 @@
-export const TaskCounter = ({total, completed}) => {
+import styles from './TaskCounter.module.css';
 
-    const activeValue = total - completed;
-    
-    return (
-      <div>
-        <p>Total : {total}</p>
-        <p >Active: {activeValue}</p>
-        <p >Completed: {completed}</p>
-      </div>
-    );
-  };
+export const TaskCounter = ({ total, completed }) => {
+  const activeValue = total - completed;
+
+  return (
+    <div>
+      <p className={styles.counter_title}>Total : {total}</p>
+      <p className={styles.counter_title}>Active: {activeValue}</p>
+      <p className={styles.counter_title}>Completed: {completed}</p>
+    </div>
+  );
+};
