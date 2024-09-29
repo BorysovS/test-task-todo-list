@@ -1,7 +1,5 @@
 import styles from './TaskItem.module.css';
 
-import sprite from './assets/sprite.svg';
-
 export const TaskItem = ({ task, toggleCompleted, deleteTask }) => {
   return (
     <div
@@ -30,7 +28,7 @@ export const TaskItem = ({ task, toggleCompleted, deleteTask }) => {
           aria-label="icon-calendar"
           className={styles.date_icon}
         >
-          <use href={sprite + '#icon-calendar'}></use>
+          <use href={`/sprite.svg#icon-calendar`}></use>
         </svg>
         <p className={styles.task_item_date}>{task.date}</p>
       </div>
@@ -39,14 +37,14 @@ export const TaskItem = ({ task, toggleCompleted, deleteTask }) => {
         type="button"
         onClick={() => deleteTask(task.id)}
       >
-        <svg
+        {/* <svg
           width={16}
           height={16}
           aria-label="icon-bin"
           className={styles.del_icon}
         >
           <use href={sprite + '#icon-bin'}></use>
-        </svg>
+        </svg> */}
       </button>
     </div>
   );
