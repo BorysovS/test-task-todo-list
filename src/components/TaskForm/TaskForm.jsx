@@ -7,6 +7,10 @@ export const TaskForm = ({ addTask }) => {
 
   const handleSubmit = evt => {
     evt.preventDefault();
+    if (!taskName) {
+      alert('The task cannot be empty.');
+      return;
+    }
     const newTask = {
       id: Date.now(),
       date: new Date().toLocaleDateString('uk-UA', {
