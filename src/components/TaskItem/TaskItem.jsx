@@ -1,6 +1,6 @@
 import styles from './TaskItem.module.css';
 
-import sprite from './sprite.svg';
+import sprite from './assets/sprite.svg';
 
 export const TaskItem = ({ task, toggleCompleted, deleteTask }) => {
   return (
